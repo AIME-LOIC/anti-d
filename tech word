@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="product10.jpg" type="image/jpg" style="border: none; background: transparent; border-radius: 30px;">
+    <title>TECH WORLD</title>
+</head>
+<style>
+   
+   body {
+            background-color: #f0f0f0;
+            height: 120%;
+        }
+
+        header {
+            width: 100%;
+            background: #2ecc71;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        header h1 {
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-left: 20px;
+            text-wrap: nowarp;
+            animation: type 2s steps(20) alternate-reverse;
+
+        }
+        @keyframes type{
+            from{
+                
+                margin-left: 20px;
+            }
+        }
+
+        #cart_info {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+            margin-right: 20px;
+        }
+
+        #cart {
+            width: 40px;
+            height: 40px;
+        }
+    #main_products{
+        margin-top: 200px;
+        
+    }
+    #item1,#item2,#item3{
+        height: 600px;
+        width: 700px;
+        border: 1px solid;
+        text-align: center;
+        overflow: auto;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px black;
+        cursor: pointer;
+        flex-wrap: wrap;
+
+        
+
+    }
+    #item1:hover,#item2:hover,#item3:hover{
+      height: 610px;
+      width: 710px;
+    }
+    #main_products div button{
+        margin-top: 10px;
+        margin-left: 100px;
+        font-size: 2.4rem;
+        box-shadow: 10px 10px 10px black;
+        cursor: pointer;
+        font-family: italic;
+        border-radius: 30px;
+       
+    }
+    #main_products div img{
+        width: 100%;
+        height: 70%;
+        background-color: darkgray;
+    }
+    #main_products div p{
+        font-size: 2.1rem;
+        font-family: italic;
+    }
+    #main_products div button:hover{
+        background: lightgreen;
+          animation: fly 1s infinite ;
+    }
+    @keyframes fly{
+        0%{background: white;}
+        50%{background: lightgreen;}
+        100%{background: white;}
+    }
+    #main_products{
+        display: flex;
+        gap: 30px;
+    }
+    #cart{
+        border: none;
+        background: transparent;
+        height: 90px;
+        width: 70px;
+        margin-top: 14px;
+        margin-left: -230px;
+    }
+    #not{
+        
+            background: red;
+            color: white;
+            
+            font-size: 1rem;
+            border-radius: 60%;
+            padding: 12px 12px;
+            position: absolute;
+            margin-left: 1620px;
+            margin-top: -15px;
+        }
+    
+</style>
+<body>
+    <header>
+        <h1>TECH WORLD <span id="not"></span></h1>
+        <nav>
+            <button id="cart_info" onclick="play()"><img src="image.png" alt="" id="cart"> </button>
+            
+            
+            
+        </nav>
+    </header>
+    <div id="info" hidden>
+        <p id="totals"></p>
+         <button id="buy_all" onclick="buy_all()">buy  </button>
+         <button id="cancle" onclick="cancle()">cancle</button>
+     </div>
+    <div id="main_products">
+        <div id="item1" class="product">
+            <img src="product10.jpg" alt="item bought wait until new item pops" id="item">
+            <p>                          $34500</p>
+            
+             <hr>
+            <button id="add" onclick="add_cart('34500','ig.jpg')">add cart</button>
+        </div>
+        <div id="item2" class="product">
+            <img src="product1.jpg" alt="" id="items">
+            
+            <p>                        $16500</p>
+            <hr>
+            <button id="add" onclick="add_cart('16500','Tiktok.jpg')">add cart</button>
+        </div>
+        <div id="item3" class="product">
+            <img src="product2.jpg" alt="" id="itemss">
+            
+            <p>                          $12500</p>
+            <hr>
+            <button id="add" onclick="add_cart('12500')">add cart</button>
+        </div>
+    </div>
+    <div id="main_products">
+        <div id="item1">
+            <img src="product3.jpg" alt="">
+            
+            <p>                        $15000</p>
+            <hr>
+            <button id="add" onclick="add_cart('15000')">add cart</button>
+        </div>
+        <div id="item2">
+            <img src="product4.jpg" alt="">
+            
+            <p>             $20000</p>
+            <hr>
+            <button id="add" onclick="add_cart('20000')">add cart</button>
+        </div>
+        <div id="item3">
+            <img src="product5.jpg" alt="">
+            
+            <p>             $21000</p>
+            <hr>
+            <button id="add" onclick="add_cart('21000')">add cart</button>
+        </div>
+    </div>
+    <div id="main_products">
+        <div id="item1">
+            <img src="product6.jpg" alt="">
+            
+            <p>             $20000</p>
+            <hr>
+            <button id="add" onclick="add_cart('20000')">add cart</button>
+        </div>
+        <div id="item2">
+            <img src="product7.jpg" alt="">
+            
+            <p>             $19800</p>
+            <hr>
+            <button id="add" onclick="add_cart('19800')">add cart</button>
+        </div>
+        <div id="item3">
+            <img src="product8.jpg" alt="">
+                        <p>             $20000</p>
+                        <hr>
+            <button id="add" onclick="add_cart('20000')">add cart</button>
+        </div>
+    </div>
+</body>
+<script>
+    
+    let number=1
+    let total=0
+    
+    function add_cart(price,newImage){
+       
+      do{
+        document.getElementById("not").textContent=number;
+        number++
+      }while(number<2);
+      total += parseInt(price, 10); 
+        document.getElementById("totals").textContent = "Total: $" + total.toLocaleString();
+         
+        
+    }
+    function play(){
+        document.getElementById("info").style.display="block"
+        document.getElementById("info").style.border="none"
+        document.getElementById("info").style.borderRadius="30px"
+        document.getElementById("info").style.textAlign="center"
+        document.getElementById("info").style.fontSize="2rem"
+        document.getElementById("info").style.marginTop="120px"
+        document.getElementById("info").style.height="200px"
+        document.getElementById("info").style.width="300px"
+        document.getElementById("info").style.marginLeft="900px"
+        document.getElementById("buy_all").style.marginTop="-60px"
+        document.getElementById("info").style.position="fixed"
+        document.getElementById("info").style.background="rgba(0, 0, 0, 0.8)"
+        document.getElementById("info").style.transform="translate(-50%, -50%)"
+        document.getElementById("info").style.color="white"
+        document.getElementById("buy_all").style.background="lightgreen"
+        document.getElementById("buy_all").style.fontSize="2rem"
+        document.getElementById("buy_all").style.borderRadius="30px"
+        document.getElementById("cancle").style.background="red"
+        document.getElementById("cancle").style.fontSize="2rem"
+        document.getElementById("cancle").style.borderRadius="30px"
+        document.getElementById("buy_all").style.cursor="pointer"
+        
+        
+        
+    }
+    function buy_all(){
+       
+        if(total>=100000){
+            alert(`you bought ${number=number-1} you have a discount so you'll pay ${total-15000}`)
+        }
+        else{
+            alert(`you bought ${number=number-1} item total price is ${total.toLocaleString()}`)
+        }
+        setTimeout(()=>{
+            document.getElementById("info").style.display="none"
+            document.getElementById("not").textContent=`${number=number-number}`
+            document.getElementById("totals").textContent = `Total: $  ${total=total-total}`
+        },1000);
+    }
+    function cancle(){
+        document.getElementById("totals").textContent = "Cancled"
+        setTimeout(()=>{
+            document.getElementById("info").style.display="none"
+            document.getElementById("not").textContent=`${number=number-number}`
+            document.getElementById("totals").textContent = `Total: $  ${total=total-total}`
+        },1000); 
+    }
+    document.body.contentEditable=false;
+    let product=document.getElementById("main_products")
+    product.sort()
+</script>
+</html>
